@@ -1,1 +1,108 @@
-/* Member 4 owns search and filter styles. Keep component-specific rules here. */
+.filters-controls {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) auto;
+  align-items: end;
+  gap: 1rem;
+  color: var(--color-text);
+}
+
+.filters-search {
+  display: grid;
+  gap: .45rem;
+  min-width: 0;
+  font-size: .88rem;
+  font-weight: 650;
+}
+
+.filters-search__input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: .7rem .8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  color: var(--color-text);
+  background: var(--color-surface);
+  font-weight: 400;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.filters-search__input::placeholder {
+  color: #9aa3b2;
+}
+
+.filters-search__input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, .14);
+}
+
+.filters-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding: .25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.filters-tab {
+  min-height: 2.2rem;
+  padding: .45rem .7rem;
+  border: 0;
+  border-radius: 7px;
+  color: var(--color-muted);
+  background: transparent;
+  font-size: .84rem;
+  font-weight: 650;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.filters-tab:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.filters-tab.is-active {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.filters-search__input:focus-visible,
+.filters-tab:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, .25);
+  outline-offset: 2px;
+}
+
+.filters-empty {
+  margin: .85rem 0 0;
+  color: var(--color-muted);
+  font-size: .88rem;
+}
+
+.filters-empty[hidden] {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .filters-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-tabs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .filters-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .filters-tab {
+    text-align: left;
+  }
+}
