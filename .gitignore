@@ -1,0 +1,8 @@
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local development output
+coverage/
+dist/

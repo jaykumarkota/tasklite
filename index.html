@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TaskLite, a lightweight task management dashboard." />
+    <title>TaskLite | Task Management</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/add-task.css" />
+    <link rel="stylesheet" href="css/task-list.css" />
+    <link rel="stylesheet" href="css/filters.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#dashboard" aria-label="TaskLite dashboard">
+          <span class="brand-mark">T</span><span>TaskLite</span>
+        </a>
+        <nav class="nav-links">
+          <a class="nav-link is-active" href="#dashboard">Dashboard</a>
+          <a class="nav-link" href="#tasks">My tasks</a>
+          <a class="nav-link" href="#settings">Settings</a>
+        </nav>
+        <p class="sidebar-note">A small team project built with vanilla JavaScript.</p>
+      </aside>
+
+      <main class="main-content" id="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">WORKSPACE</p>
+            <h1>Good day, teammate.</h1>
+            <p class="page-subtitle">Keep your work focused and moving forward.</p>
+          </div>
+          <button class="profile-button" type="button" aria-label="Open profile menu">TL</button>
+        </header>
+
+        <section class="stats-section" aria-labelledby="stats-heading">
+          <div class="section-heading"><h2 id="stats-heading">Overview</h2><span id="stats-summary">Loading tasks…</span></div>
+          <div class="stats-grid" id="dashboard-stats" aria-live="polite">
+            <article class="stat-card"><span>Total tasks</span><strong data-stat="total">0</strong></article>
+            <article class="stat-card"><span>Completed</span><strong data-stat="completed">0</strong></article>
+            <article class="stat-card"><span>In progress</span><strong data-stat="active">0</strong></article>
+            <article class="stat-card"><span>High priority</span><strong data-stat="high">0</strong></article>
+          </div>
+        </section>
+
+        <section class="workspace" id="tasks" aria-label="Task management workspace">
+          <div class="workspace-header"><div><h2>My tasks</h2><p>Plan, filter, and complete your work.</p></div></div>
+          <!-- Member 2 mounts the add-task form in this container. -->
+          <div id="add-task-container" class="feature-container" data-owner="Member 2: Add Task">
+            <p>Add Task module placeholder</p>
+          </div>
+          <!-- Member 4 mounts search and filters in this container. -->
+          <div id="filters-container" class="feature-container" data-owner="Member 4: Search and Filters">
+            <p>Search and Filters module placeholder</p>
+          </div>
+          <!-- Member 3 mounts the task list in this container. -->
+          <div id="task-list-container" class="feature-container task-list-container" data-owner="Member 3: Task List">
+            <p>Task List module placeholder</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
